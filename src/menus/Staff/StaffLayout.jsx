@@ -4,9 +4,9 @@ import { Routes, Route } from "react-router-dom";
 import StaffHeader from '../../componets/StaffHeaader/Staffheader';
 import StaffDashBoard from './StaffDashBoard';
 import StaffApprovals from './StaffApprovals';
-import StaffReport from './StaffReport';
 import StaffAnnouncement from './StaffAnnouncement';
 import MarkAttendance from './MarkAttendance';
+import StudentInfo from './StudentInfo';
 
 export default function StaffLayout() {
 
@@ -42,9 +42,10 @@ export default function StaffLayout() {
         <Routes>
           <Route path="dashboard" element={<StaffDashBoard />} />
           <Route path="approvals" element={<StaffApprovals />} />
-          <Route path="report" element={<StaffReport />} />
+         
           <Route path="announcement" element={<StaffAnnouncement />} />
           <Route path="markattend" element={<MarkAttendance />} />
+          <Route path="studentinfo" element={<StudentInfo />} />
         </Routes>
       </div>
 

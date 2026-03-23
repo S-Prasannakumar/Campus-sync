@@ -1,12 +1,12 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
 import { FaSignOutAlt } from "react-icons/fa";
-import { MdAssignment } from "react-icons/md";
 import { RxDashboard } from "react-icons/rx";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import { LuGraduationCap } from "react-icons/lu";
 import { HiSpeakerphone } from "react-icons/hi";
 import { useNavigate, Link } from "react-router-dom";
+import { PiStudentBold } from "react-icons/pi";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Staffheader.css';
 
@@ -41,6 +41,10 @@ export default function StaffHeader() {
     <RxDashboard size={20} /> Dashboard
   </Nav.Link>
 
+   <Nav.Link as={Link} to="/staff/markattend" className="nav-link-custom mb-2 d-flex align-items-center gap-3 p-2 rounded text-white">
+    <RxDashboard size={20} /> Attendance
+  </Nav.Link>
+
   <Nav.Link as={Link} to="/staff/Approvals" className="nav-link-custom mb-2 d-flex align-items-center gap-3 p-2 rounded text-white">
     <IoMdCheckboxOutline size={20} /> Approvals
   </Nav.Link>
@@ -49,12 +53,11 @@ export default function StaffHeader() {
     <HiSpeakerphone size={20} /> Announcements
   </Nav.Link>
 
-  <Nav.Link as={Link} to="/staff/Report" className="nav-link-custom mb-2 d-flex align-items-center gap-3 p-2 rounded text-white">
-     <MdAssignment size={20} /> Class Report
+
+  <Nav.Link as={Link} to="/staff/studentinfo" className="nav-link-custom mb-2 d-flex align-items-center gap-3 p-2 rounded text-white">
+     <PiStudentBold size={20}/> Student Info
   </Nav.Link>
-  <Nav.Link as={Link} to="/staff/markattend" className="nav-link-custom mb-2 d-flex align-items-center gap-3 p-2 rounded text-white">
-     <MdAssignment size={20} /> Mark Attanance
-  </Nav.Link>
+
 </Nav>
 
       {/* Profile & Sign Out */}
